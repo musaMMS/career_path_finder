@@ -1,3 +1,5 @@
+import 'package:career_path_finder/Cv/CVFormScreen.dart';
+import 'package:career_path_finder/Widget/Bottom_navigation%20Bar.dart';
 import 'package:flutter/material.dart';
 
 import 'Home/HomeScreen.dart';
@@ -22,8 +24,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       routes: {
+        '/Nav': (context) => const MyBottomNavScreen(),
         '/login': (context) => const HomeScreen(),
         '/quiz': (context) => const QuizScreen(),
+        '/cv': (context) => const CVFormScreen(),
         '/register': (context) => const RegisterScreen(),
         '/home': (context) => const HomeScreen(), // এই স্ক্রিন পরের ধাপে বানাবো
       },

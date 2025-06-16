@@ -1,9 +1,10 @@
-import 'dart:nativewrappers/_internal/vm/lib/typed_data_patch.dart';
-import 'dart:typed_data';
+import 'dart:typed_data'; // শুধু এটিই রাখো
+
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
+
 
 class CVFullPdfScreen extends StatelessWidget {
   final String name, email, phone, address, summary, skills, education, experience, projects, languages;
@@ -22,7 +23,7 @@ class CVFullPdfScreen extends StatelessWidget {
     required this.languages,
   });
 
-  Future<Future<Uint8List>> _generatePdf(PdfPageFormat format) async {
+  Future<Uint8List> _generatePdf(PdfPageFormat format) async {
     final pdf = pw.Document();
 
     pw.Widget sectionTitle(String title) => pw.Text(title,
