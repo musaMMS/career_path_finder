@@ -1,7 +1,7 @@
 import 'package:career_path_finder/Cv/CVFormScreen.dart';
 import 'package:career_path_finder/Widget/Bottom_navigation%20Bar.dart';
+import 'package:career_path_finder/color/app_theme.dart';
 import 'package:flutter/material.dart';
-
 import 'Home/HomeScreen.dart';
 import 'Quiz/Quiz_screen.dart';
 import 'Reg/Login_screen.dart';
@@ -18,14 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      initialRoute: '/login',
+      theme: AppTheme.lightTheme,
+      initialRoute: '/Nav',
       routes: {
         '/Nav': (context) => const MyBottomNavScreen(),
-        '/login': (context) => const HomeScreen(),
         '/quiz': (context) => const QuizScreen(),
         '/cv': (context) => const CVFormScreen(),
         '/register': (context) => const RegisterScreen(),

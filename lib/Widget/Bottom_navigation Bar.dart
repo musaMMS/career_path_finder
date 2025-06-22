@@ -1,6 +1,5 @@
 import 'package:career_path_finder/Cv/CVFormScreen.dart';
 import 'package:flutter/material.dart';
-
 import '../Home/HomeScreen.dart';
 
 class MyBottomNavScreen extends StatefulWidget {
@@ -49,18 +48,16 @@ class _MyBottomNavScreenState extends State<MyBottomNavScreen> with TickerProvid
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        children: _screens,
         onPageChanged: (index) {
           setState(() {
             _currentIndex = index;
           });
         },
-        physics: const NeverScrollableScrollPhysics(), // Optional: Prevent swipe
+        physics: const NeverScrollableScrollPhysics(),
+        children: _screens, // Optional: Prevent swipe
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.deepPurple,
-        unselectedItemColor: Colors.grey,
         onTap: _onTabTapped,
         type: BottomNavigationBarType.fixed,
         items: const [
