@@ -52,7 +52,7 @@ class _CVFormScreenState extends State<CVFormScreen> {
                     education: educationController.text,
                     experience: experienceController.text,
                     projects: projectsController.text,
-                    languages: languagesController.text,
+                    languages: languagesController.text, evaluation: '',
                   ),
                 ));
               },

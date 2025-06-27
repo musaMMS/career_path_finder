@@ -1,4 +1,5 @@
 import 'package:career_path_finder/Cv/CVFormScreen.dart';
+import 'package:career_path_finder/views/CareerSuggestionScreen.dart';
 import 'package:flutter/material.dart';
 import '../Home/HomeScreen.dart';
 
@@ -20,7 +21,7 @@ class _MyBottomNavScreenState extends State<MyBottomNavScreen> with TickerProvid
     super.initState();
     _screens = const [
       HomeScreen(),
-      Placeholder(),
+      CareerSuggestionScreen(),
       CVFormScreen(),
     ];
     _pageController = PageController();

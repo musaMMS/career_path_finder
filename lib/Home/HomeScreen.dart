@@ -1,3 +1,4 @@
+import 'package:career_path_finder/views/career_path_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
@@ -181,7 +182,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: Text(title, style: TextStyle(fontSize: 16 * fontScale)),
         trailing: const Icon(Icons.arrow_forward_ios),
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>CareerDetailsScreen(title: '', responsibilities: '', requiredSkills: '', jobFields: '', averageIncome: '', educationPath: '')));
+        },
       ),
     );
   }
